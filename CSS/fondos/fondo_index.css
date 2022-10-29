@@ -1,0 +1,8 @@
+/*ACA ESTA EL FONDO DEL INDEX Y DEL CATALOGO DE HOTELES*/
+
+body{
+    background: url(../../IMG/Index/fondo.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}

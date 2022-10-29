@@ -1,0 +1,58 @@
+
+
+footer{
+    width: 100%;
+    background: #0000005b;
+    color: white;   
+}
+
+.container-footer-all{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+}
+
+.container-body{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.container-footer{
+    width: 100%;  
+    background: #101010;
+}
+
+.footer{
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+.copyright{
+    color: #C7C7C7;
+}
+
+.copyright a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-row{
+    flex-direction: row;
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

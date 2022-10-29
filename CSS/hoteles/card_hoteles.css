@@ -1,0 +1,108 @@
+.card_hot{
+    width: 45%;
+    border-radius: 30px;
+    background-color: rgba(255, 249, 249, 0.027);
+    border-color: grey;
+    border-width: 1px;
+}
+.card_coso{
+    border-radius: 30px;
+    background-color: rgba(99, 96, 96, 0.356);
+    border-color: rgb(128, 128, 128);
+    color:rgb(255, 255, 255);
+}
+.card_hot h5{
+    color: black;
+}
+.card_hot p{
+    color: black;
+}
+.radius{
+    border-radius: 20px;
+}
+.letraFiltro{
+  font-size: 1.4em; /* 1.4em x 10px = 14px */
+}
+
+.flex-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.card_filtro{
+    color:rgb(255, 255, 255);
+    padding: 10px 10px;
+    border-radius: 5px;
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.151);
+}
+/*Style iconos*/
+.iconos{
+  color: rgb(255, 187, 0);
+}
+/* Card_Habitacion Imagen */
+.img_habitacion {
+  margin-top: 6%;
+  width: 100%;
+  height: 100%;
+  position: left;
+  }
+/* ESTRELLAS */
+#form {
+    width: 250px;
+    margin: center;
+    height: 50px;
+  }
+  #form p {
+    text-align: center;
+  }
+  #form label {
+    font-size: 40px;
+  }
+  input[type="radio"] {
+    display: none;
+  }
+  label {
+    color: rgba(128, 128, 128, 0.349);
+  }
+  .clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+  }
+  label:hover,
+  label:hover ~ label {
+    color: rgb(214, 214, 214);
+  }
+  input[type="radio"]:checked ~ label {
+    color: orange;
+  }
+/*ATRIBUTOS MEDIA*/
+@media (Max-width: 1350px){
+/* Card_Habitacion Imagen */
+
+.img_habitacion {
+  margin-top: 9%;
+  width: 105%;
+  position: left;
+  height: 300px;
+  }
+
+}
+@media (max-width:1224px){
+
+.flex-container div{
+  flex-direction: row;
+  align-items: center;
+  flex-basis: 100%;
+ 
+}
+
+
+.img_habitacion {
+  margin-left: 1.1%;
+  margin-top: 2%;
+  width: 100%;
+  height: 100%;
+  }
+}
+

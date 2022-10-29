@@ -1,0 +1,107 @@
+/*HOTEL*/
+@import url(menu-h.css);
+@import url(../font-awesome.min.css);
+
+.cont__buscador{
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0);
+
+}
+
+.cont__hotel{
+    border-radius: 5px;
+    padding: 10px 20px;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+
+.main{
+    z-index: -1;
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 70px;
+}
+
+.main h1{
+    color: rgb(255, 255, 255);
+}
+/*FILTROS CSS*/
+
+#filtros-slide1{
+
+  background-color: rgba(0, 0, 0, 0.055); 
+  border-color: rgba(255, 187, 0, 0.5);  
+}
+
+#filtros-slide2{
+  width: auto;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.055); 
+}
+
+
+#filtros-tittle{
+    color:rgb(255, 187, 0);
+}
+
+#filtros-subtittle{
+    color:rgb(255, 187, 0);
+}
+
+#filtros-norm{
+    width: 20rem; 
+    background-color: rgba(0, 0, 0, 0.048); 
+    margin-right: 100%;
+}
+
+#filtros-norm a{
+    align-items: center;
+}
+/*ATRIBUTOS MEDIA*/
+
+@media (max-width:992px) and (min-width:910px){
+    #filtros-tittle{
+        color:rgb(255, 187, 0);
+        font-size: x-large;
+    }
+
+    #filtros-subtittle{
+        color:rgb(255, 187, 0);
+        font-size: large;
+    }
+
+    #filtros-norm{
+
+        width: 12rem; 
+        background-color: rgba(0, 0, 0, 0.048); 
+        margin-right: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width:992px) and (min-width:910px){
+    #filtros-tittle{
+        color:rgb(255, 187, 0);
+        font-size: x-large;
+    }
+
+    #filtros-norm{
+        width: 12rem; 
+        background-color: rgba(0, 0, 0, 0.048); 
+        margin-right: 100%;
+        margin-left: 0;
+    }
+
+    #filtros-subtittle{
+        color:rgb(255, 187, 0);
+        font-size: large;
+    }
+}

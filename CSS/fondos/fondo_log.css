@@ -1,0 +1,7 @@
+/*ACA ESTA EL FONDO DEL LOGIN*/
+
+body{
+    background: url(../../IMG/Form_Log-Reg/fondo.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
