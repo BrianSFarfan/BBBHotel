@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>BBB | Hoteles</title>
+
+    <link rel="shortcut icon" href="../IMG/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/hoteles/hotel.css">
+    <link rel="stylesheet" href="../CSS/hoteles/menu-h.css">
+	<link rel="stylesheet" href="../CSS/fondos/fondo_index.css">
+    <link rel="stylesheet" href="../CSS/hoteles/card_hoteles.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../CSS/estilosFooter.css">
+    <link rel="stylesheet" href="../CSS/Tooltips.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+		<div class="btn-menu">
+			<label for="btn-menu">☰</label>
+		</div>
+			<div>
+				<input type="image" role="link" onclick="window.location='../index.html'" src="../img/index/logo2.png" style="width: 90px; margin-top: 20px;"></h1>
+			<nav class="menu">
+				<form class="d-flex" style="margin-top: 6%;">
+				<a href="form_log.html" style="color: rgba(255, 255, 255, 0.836); margin-top: 20px;"><i class="fa fa-user"></i> <b>Iniciar Sesion</b></a>
+				  </form>
+			</nav>
+		</div>
+		</div>
+	</header>
+	<div class="capa"></div>
+<!--L A T E R A l--------------->
+  <input tabindex="-1" type="checkbox" id="btn-menu">
+    <div class="container-menu">
+      <div class="cont-menu">
+        <nav>
+          <a href="cat_hotel.html">Habitaciones</a>
+          <a href="#">Reservas</a>
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Youtube</a>
+          
+        </nav>
+        <label for="btn-menu" style="color: rgb(255, 196, 0)"><i class="bi bi-x-square"></i></label>
+      </div>
+    </div>
+
+        <div class="main">
+            
+            <div class="cont__buscador" style="justify-content: center;">
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="background-color: rgba(0, 0, 0, 0);color:rgb(255, 255, 255)">
+                    <button class="btn btn-outline-warning" type="submit; ">Search</button>
+                </form>
+
+            </div>
+    <p></p>
+
+
+<!-- FILTRO :D-->
+<div class="flex-container">
+
+    <div class="row">
+
+      <div class="col-md-3">
+            <div class="card_filtro" >
+                
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item " id="filtros-slide1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne" style="background-color: rgba(0, 0, 0, 0.281);">
+                    <h4 id="filtros-tittle">Filtros</h4>
+                  </button>
+                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                    <div class="accordion-body">
+<!-- ORDENAR POR :D-->
+
+              <h5 class="card-text" id="filtros-subtittle">Ordenar por:</h5>
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                  <button class="btn btn-outline-light active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#Recomendado" type="button" role="tab" aria-controls="Recomendado" aria-selected="true" style="border-color: transparent; background-color: transparent;color: white;"><i class="bi bi-hand-thumbs-up iconos"></i> Recomendado</button>
+                  <button class="btn btn-outline-light" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#Favoritos" type="button" role="tab" aria-controls="Favoritos" aria-selected="false" style="border-color: transparent; background-color: transparent;color: white;"><i class="bi bi-bookmark-heart iconos"></i> Favoritos</button>
+  <!-- RANGO DE PRECIOS :D-->
+                  <h5 class="card-text"Style="color:rgb(255, 187, 0)">Rangos de precio:</h5>
+                  <button class="btn btn-outline-light" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#Menor" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false" style="border-color: transparent; background-color: transparent;color: white;"> <i class="bi bi-arrow-down-circle iconos"></i> Menor a Mayor</button>
+                  <button class="btn btn-outline-light" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#Mayor" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false" style="border-color: transparent; background-color: transparent;color: white;"> <i class="bi bi-arrow-up-circle iconos"></i> Mayor a Menor</button>
+                </div>
+
+
+
+<!-- Estrellas :D-->
+
+                <h5 class="card-text"Style="color:rgb(255, 187, 0)">Estrellas:</h5>
+                     <ol>
+                        <form>
+                            <center>
+                            <p class="clasificacion" style="font-size: 2rem;">
+                              <input id="radio1" type="radio" name="estrellas" value="5"><!--
+                              --><label for="radio1">★</label><!--
+                              --><input id="radio2" type="radio" name="estrellas" value="4"><!--
+                              --><label for="radio2">★</label><!--
+                              --><input id="radio3" type="radio" name="estrellas" value="3"><!--
+                              --><label for="radio3">★</label><!--
+                              --><input id="radio4" type="radio" name="estrellas" value="2"><!--
+                              --><label for="radio4">★</label><!--
+                              --><input id="radio5" type="radio" name="estrellas" value="1"><!--
+                              --><label for="radio5">★</label>
+                            </p>
+                        </center>
+                          </form>
+                    </ol>
+<!-- MAS FILTROS (dolor de huevos) :D-->
+
+<div class="accordion-item " id="filtros-slide2">
+  <center>
+    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo" style="background-color: rgba(0, 0, 0, 0.281);">
+        <h5 class="card-text"Style="color:rgb(255, 187, 0)">Mas Filtros</h5>
+      </button>
+    </h2>
+  </center>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+        <div class="accordion-body">
+
+                <ol>
+                    <i class="bi bi-x-circle iconos"></i>  <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." style="border-color:rgb(255, 187, 0); background-color: rgba(0, 0, 0, 0);">
+                    Cancelacion sin cargo</ol>
+                <ol>
+                    <i class="bi bi-basket3 iconos"></i> <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." style="border-color:rgb(255, 187, 0); background-color: rgba(0, 0, 0, 0);">
+                  Incluye Comidas</ol>
+                <ol>
+                    <i class="bi bi-water iconos"></i>  <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." style="border-color:rgb(255, 187, 0); background-color: rgba(0, 0, 0, 0);">
+                  Piscina</ol>
+                <ol> 
+                    <i class="bi bi-wifi iconos"></i>  <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." style="border-color:rgb(255, 187, 0); background-color: rgba(0, 0, 0, 0);">
+                  Wifi</ol>
+                <ol><i class="bi bi-house-door iconos"></i> <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." style="border-color:rgb(255, 187, 0); background-color: rgba(0, 0, 0, 0);">
+                  Estacionamiento</ol>
+                <ol>
+                    <i class="bi bi-snow3 iconos"></i> <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." style="border-color:rgb(255, 187, 0); background-color: rgba(0, 0, 0, 0);">
+                  Aire Acondicionado</ol>
+                <ol>
+                    <i class="bi bi-emoji-heart-eyes iconos"></i> <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." style="border-color:rgb(255, 187, 0); background-color: rgba(0, 0, 0, 0);">
+                  Mascotas Permitidas</ol>
+                <ol>
+                    <i class="bi bi-cash-coin iconos"></i> <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." style="border-color:rgb(255, 187, 0); background-color: rgba(0, 0, 0, 0);">
+                  Pago en el Establecimiento</ol>
+                <ol>
+                    <i class="bi bi-moisture iconos"></i> <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." style="border-color:rgb(255, 187, 0); background-color: rgba(0, 0, 0, 0);">
+                  Bañera con Hidro</ol>
+                <ol>
+                    <i class="bi bi-stars iconos"></i> <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." style="border-color:rgb(255, 187, 0); background-color: rgba(0, 0, 0, 0);">
+                  Spa</ol>
+                <ol><i class="bi bi-nut iconos"></i> <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." style="border-color:rgb(255, 187, 0); background-color: rgba(0, 0, 0, 0);">
+                  Gimnasio</ol>
+                <ol>
+                    <i class="bi bi-person-square iconos"></i> <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." style="border-color:rgb(255, 187, 0); background-color: rgba(0, 0, 0, 0);">
+                  Acesso silla de ruedas</ol>
+                <ol>
+                    <i class="bi bi-piggy-bank iconos"></i>  <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." style="border-color:rgb(255, 187, 0); background-color: rgba(0, 0, 0, 0);">
+                  Ofertas :D</ol>
+    
+            </div>
+          </div>
+            </div>
+            </div>
+            <center> <a href="#" class="btn btn-outline-warning">Aver? :D</a></center>
+            <br>
+          </div>
+       
+    </div>
+</div>
+    </div>
+</div>
+<!-- CARDs :D----------------------------------------------------------------------------------------------------------->
+<br>
+<div class="col-md-9">
+  <div class="tab-content" id="v-pills-tabContent"><!-- INICIO DE CONTENIDO -->
+    <div class="tab-pane fade show active" id="Recomendado" role="tabpanel" aria-labelledby="v-pills-home-tab">
+  <!-- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓Desde aca se puede copiar ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓------------------------>
+<div class="card" style="background-color: rgba(12, 12, 12, 0.644); margin-top: 2%;" >
+    <div class="row">
+    <div class="col-md-6">
+      <center><img class=img_habitacion src="../IMG/imgHoteles/Hotel3/Habitaciones/Hab3.jpg" class="img-fluid"></center>
+    </div>
+    <div class="col-md-6" style="color:white">
+        <p></p>
+        <!-- Nombre y Estrellas:D-->
+        <center>
+        <div class="col-md-12">
+        <div class="col-md-6">
+        <h5 style="color:rgb(255, 196, 0)"> 
+            "Nombre de la Habitacion"
+        </h5>
+      </div>
+        <div class="col-6">
+          <h5 style="color:rgb(255, 196, 0)"> 
+        ★★★★★ 
+        </h5>
+       </div>
+      </div>
+      </center>
+        <!-- DESCRIPCION :D-->
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>"Descripcion de la habitación: (ejemplo)"</p>
+                       <p>Amplia habitación de 32 m2. te hace más cómodo para tu estancia. Las instalaciones de baño y las comodidades especiales se ofrecen de forma gratuita.</p>
+                    <ul>
+                        <li> <i class="bi bi-calendar4 iconos"></i> "Cantidad de camas" </li>
+                        <li> <i class="bi bi-people-fill iconos"></i> "Cantidad de personas" </li>
+                    </ul> 
+                </div>
+<!-- Iconos-->
+        <div class="row align-items-end">
+            <p>
+                <span class="iconosTool" data-tooltip="Incluye Comidas"><i class="bi bi-basket3 iconos"></i></span>
+                <span class="iconosTool" data-tooltip="Wifi"><i class="bi bi-wifi iconos"></i></span>
+                <span class="iconosTool" data-tooltip="Aire Acondicionado"><i class="bi bi-snow3 iconos"></i></span>   
+            </p>
+
+              <div class="row">
+                <div class="col-md-6">
+                    <h4 style="color:rgb(255, 196, 0);">
+                          <button type="button" class="btn btn-outline-warning">Reservar</button>
+                          <button type="button" class="btn btn-outline-warning"><i class="bi bi-heart-fill"></i></button>
+                      </h4>
+                 </div> 
+                 <div class="col-md-6">
+                    <h3 style="color:rgb(255, 196, 0);" align="right">
+                      AR$ 5,311
+                    </h3>
+                </div>  
+
+          </div>
+    </div>
+ 
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+        <!--FIN DE CARD 1-->
+<!-- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓Desde aca se puede copiar ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓------------------------>
+<div class="card" style="background-color: rgba(12, 12, 12, 0.644); margin-top: 2%;" >
+  <div class="row">
+  <div class="col-md-6">
+    <center><img class=img_habitacion src="../IMG/imgHoteles/Hotel3/Habitaciones/Hab2.jpg" class="img-fluid"></center>
+  </div>
+  <div class="col-md-6" style="color:white">
+      <p></p>
+      <!-- Nombre y Estrellas:D-->
+      <center>
+      <div class="col-md-12">
+      <div class="col-md-6">
+      <h5 style="color:rgb(255, 196, 0)"> 
+          "Nombre de la Habitacion"
+      </h5>
+    </div>
+      <div class="col-6">
+        <h5 style="color:rgb(255, 196, 0)"> 
+      ★★★★★ 
+      </h5>
+     </div>
+    </div>
+    </center>
+      <!-- DESCRIPCION :D-->
+      <div class="container">
+          <div class="row">
+              <div class="col">
+                  <p>"Descripcion de la habitación: (ejemplo)"</p>
+                     <p>Amplia habitación de 32 m2. te hace más cómodo para tu estancia. Las instalaciones de baño y las comodidades especiales se ofrecen de forma gratuita.</p>
+                  <ul>
+                      <li> <i class="bi bi-calendar4 iconos"></i> "Cantidad de camas" </li>
+                      <li> <i class="bi bi-people-fill iconos"></i> "Cantidad de personas" </li>
+                  </ul> 
+              </div>
+<!-- Iconos-->
+      <div class="row align-items-end">
+          <p>
+              <span class="iconosTool" data-tooltip="Incluye Comidas"><i class="bi bi-basket3 iconos"></i></span>
+              <span class="iconosTool" data-tooltip="Wifi"><i class="bi bi-wifi iconos"></i></span>
+              <span class="iconosTool" data-tooltip="Aire Acondicionado"><i class="bi bi-snow3 iconos"></i></span>   
+          </p>
+
+            <div class="row">
+              <div class="col-md-6">
+                  <h4 style="color:rgb(255, 196, 0);">
+                        <button type="button" class="btn btn-outline-warning">Reservar</button>
+                        <button type="button" class="btn btn-outline-warning"><i class="bi bi-heart-fill"></i></button>
+                    </h4>
+               </div> 
+               <div class="col-md-6">
+                  <h3 style="color:rgb(255, 196, 0);" align="right">
+                    AR$ 7,582
+                  </h3>
+              </div>  
+
+        </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+            <!--FIN DE CARD 2-->
+ <!-- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓Desde aca se puede copiar ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓------------------------>
+ <div class="card" style="background-color: rgba(12, 12, 12, 0.644); margin-top: 2%;" >
+  <div class="row">
+  <div class="col-md-6">
+    <center><img class=img_habitacion src="../IMG/imgHoteles/Hotel1/Habitaciones/Hab1.jpg" class="img-fluid"></center>
+  </div>
+  <div class="col-md-6" style="color:white">
+      <p></p>
+      <!-- Nombre y Estrellas:D-->
+      <center>
+      <div class="col-md-12">
+      <div class="col-md-6">
+      <h5 style="color:rgb(255, 196, 0)"> 
+          "Nombre de la Habitacion"
+      </h5>
+    </div>
+      <div class="col-6">
+        <h5 style="color:rgb(255, 196, 0)"> 
+      ★★★★★ 
+      </h5>
+     </div>
+    </div>
+    </center>
+      <!-- DESCRIPCION :D-->
+      <div class="container">
+          <div class="row">
+              <div class="col">
+                  <p>"Descripcion de la habitación: (ejemplo)"</p>
+                     <p>Amplia habitación de 32 m2. te hace más cómodo para tu estancia. Las instalaciones de baño y las comodidades especiales se ofrecen de forma gratuita.</p>
+                  <ul>
+                      <li> <i class="bi bi-calendar4 iconos"></i> "Cantidad de camas" </li>
+                      <li> <i class="bi bi-people-fill iconos"></i> "Cantidad de personas" </li>
+                  </ul> 
+              </div>
+<!-- Iconos-->
+      <div class="row align-items-end">
+          <p>
+              <span class="iconosTool" data-tooltip="Incluye Comidas"><i class="bi bi-basket3 iconos"></i></span>
+              <span class="iconosTool" data-tooltip="Wifi"><i class="bi bi-wifi iconos"></i></span>
+              <span class="iconosTool" data-tooltip="Aire Acondicionado"><i class="bi bi-snow3 iconos"></i></span>   
+          </p>
+
+            <div class="row">
+              <div class="col-md-6">
+                  <h4 style="color:rgb(255, 196, 0);">
+                        <button type="button" class="btn btn-outline-warning">Reservar</button>
+                        <button type="button" class="btn btn-outline-warning"><i class="bi bi-heart-fill"></i></button>
+                    </h4>
+               </div> 
+               <div class="col-md-6">
+                  <h3 style="color:rgb(255, 196, 0);" align="right">
+                    AR$ 1,849
+                  </h3>
+              </div>  
+
+        </div>
+  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--FIN DE CARD 3-->  
+
+ <!-- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓Desde aca se puede copiar ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓------------------------>
+ <div class="card" style="background-color: rgba(12, 12, 12, 0.644); margin-top: 2%;" >
+  <div class="row">
+  <div class="col-md-6">
+    <center><img class=img_habitacion src="../IMG/imgHoteles/Hotel1/Habitaciones/Hab2.jpg" class="img-fluid"></center>
+  </div>
+  <div class="col-md-6" style="color:white">
+      <p></p>
+      <!-- Nombre y Estrellas:D-->
+      <center>
+      <div class="col-md-12">
+      <div class="col-md-6">
+      <h5 style="color:rgb(255, 196, 0)"> 
+          "Nombre de la Habitacion"
+      </h5>
+    </div>
+      <div class="col-6">
+        <h5 style="color:rgb(255, 196, 0)"> 
+      ★★★★★ 
+      </h5>
+     </div>
+    </div>
+    </center>
+      <!-- DESCRIPCION :D-->
+      <div class="container">
+          <div class="row">
+              <div class="col">
+                  <p>"Descripcion de la habitación: (ejemplo)"</p>
+                     <p>Amplia habitación de 32 m2. te hace más cómodo para tu estancia. Las instalaciones de baño y las comodidades especiales se ofrecen de forma gratuita.</p>
+                  <ul>
+                      <li> <i class="bi bi-calendar4 iconos"></i> "Cantidad de camas" </li>
+                      <li> <i class="bi bi-people-fill iconos"></i> "Cantidad de personas" </li>
+                  </ul> 
+              </div>
+<!-- Iconos-->
+      <div class="row align-items-end">
+          <p>
+              <span class="iconosTool" data-tooltip="Incluye Comidas"><i class="bi bi-basket3 iconos"></i></span>
+              <span class="iconosTool" data-tooltip="Wifi"><i class="bi bi-wifi iconos"></i></span>
+              <span class="iconosTool" data-tooltip="Aire Acondicionado"><i class="bi bi-snow3 iconos"></i></span>   
+          </p>
+
+            <div class="row">
+              <div class="col-md-6">
+                  <h4 style="color:rgb(255, 196, 0);">
+                        <button type="button" class="btn btn-outline-warning">Reservar</button>
+                        <button type="button" class="btn btn-outline-warning"><i class="bi bi-heart-fill"></i></button>
+                    </h4>
+               </div> 
+               <div class="col-md-6">
+                  <h3 style="color:rgb(255, 196, 0);" align="right">
+                    AR$ 3,582
+                  </h3>
+              </div>  
+
+        </div>
+  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--FIN DE CARD 4--> 
+
+
+  
+    </div>
+    <!--FIN DE FAVORITOS ----------------------------------------------------------------->
+    <div class="tab-pane fade" id="Favoritos" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+      <!-- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓Desde aca se puede copiar ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓------------------------>
+<div class="card" style="background-color: rgba(12, 12, 12, 0.644); margin-top: 2%;" >
+  <div class="row">
+  <div class="col-md-6">
+    <center><img class=img_habitacion src="../IMG/imgHoteles/Hotel3/Habitaciones/Hab3.jpg" class="img-fluid"></center>
+  </div>
+  <div class="col-md-6" style="color:white">
+      <p></p>
+      <!-- Nombre y Estrellas:D-->
+      <center>
+      <div class="col-md-12">
+      <div class="col-md-6">
+      <h5 style="color:rgb(255, 196, 0)"> 
+          "Nombre de la Habitacion"
+      </h5>
+    </div>
+      <div class="col-6">
+        <h5 style="color:rgb(255, 196, 0)"> 
+      ★★★★★ 
+      </h5>
+     </div>
+    </div>
+    </center>
+      <!-- DESCRIPCION :D-->
+      <div class="container">
+          <div class="row">
+              <div class="col">
+                  <p>"Descripcion de la habitación: (ejemplo)"</p>
+                     <p>Amplia habitación de 32 m2. te hace más cómodo para tu estancia. Las instalaciones de baño y las comodidades especiales se ofrecen de forma gratuita.</p>
+                  <ul>
+                      <li> <i class="bi bi-calendar4 iconos"></i> "Cantidad de camas" </li>
+                      <li> <i class="bi bi-people-fill iconos"></i> "Cantidad de personas" </li>
+                  </ul> 
+              </div>
+<!-- Iconos-->
+      <div class="row align-items-end">
+          <p>
+              <span class="iconosTool" data-tooltip="Incluye Comidas"><i class="bi bi-basket3 iconos"></i></span>
+              <span class="iconosTool" data-tooltip="Wifi"><i class="bi bi-wifi iconos"></i></span>
+              <span class="iconosTool" data-tooltip="Aire Acondicionado"><i class="bi bi-snow3 iconos"></i></span>   
+          </p>
+
+            <div class="row">
+              <div class="col-md-6">
+                  <h4 style="color:rgb(255, 196, 0);">
+                        <button type="button" class="btn btn-outline-warning">Reservar</button>
+                        <button type="button" class="btn btn-outline-warning"><i class="bi bi-heart-fill"></i></button>
+                    </h4>
+               </div> 
+               <div class="col-md-6">
+                  <h3 style="color:rgb(255, 196, 0);" align="right">
+                    AR$ 5,311
+                  </h3>
+              </div>  
+
+        </div>
+  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+      <!--FIN DE CARD 1-->
+    </div>
+    <!--FIN DE MENOR A MAYOR---------------------------------------------------------------------->
+    <div class="tab-pane fade" id="Menor" role="tabpanel" aria-labelledby="v-pills-messages-tab"><!-- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓Desde aca se puede copiar ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓------------------------>
+ <div class="card" style="background-color: rgba(12, 12, 12, 0.644); margin-top: 2%;" >
+  <div class="row">
+  <div class="col-md-6">
+    <center><img class=img_habitacion src="../IMG/imgHoteles/Hotel1/Habitaciones/Hab1.jpg" class="img-fluid"></center>
+  </div>
+  <div class="col-md-6" style="color:white">
+      <p></p>
+      <!-- Nombre y Estrellas:D-->
+      <center>
+      <div class="col-md-12">
+      <div class="col-md-6">
+      <h5 style="color:rgb(255, 196, 0)"> 
+          "Nombre de la Habitacion"
+      </h5>
+    </div>
+      <div class="col-6">
+        <h5 style="color:rgb(255, 196, 0)"> 
+      ★★★★★ 
+      </h5>
+     </div>
+    </div>
+    </center>
+      <!-- DESCRIPCION :D-->
+      <div class="container">
+          <div class="row">
+              <div class="col">
+                  <p>"Descripcion de la habitación: (ejemplo)"</p>
+                     <p>Amplia habitación de 32 m2. te hace más cómodo para tu estancia. Las instalaciones de baño y las comodidades especiales se ofrecen de forma gratuita.</p>
+                  <ul>
+                      <li> <i class="bi bi-calendar4 iconos"></i> "Cantidad de camas" </li>
+                      <li> <i class="bi bi-people-fill iconos"></i> "Cantidad de personas" </li>
+                  </ul> 
+              </div>
+<!-- Iconos-->
+      <div class="row align-items-end">
+          <p>
+              <span class="iconosTool" data-tooltip="Incluye Comidas"><i class="bi bi-basket3 iconos"></i></span>
+              <span class="iconosTool" data-tooltip="Wifi"><i class="bi bi-wifi iconos"></i></span>
+              <span class="iconosTool" data-tooltip="Aire Acondicionado"><i class="bi bi-snow3 iconos"></i></span>   
+          </p>
+
+            <div class="row">
+              <div class="col-md-6">
+                  <h4 style="color:rgb(255, 196, 0);">
+                        <button type="button" class="btn btn-outline-warning">Reservar</button>
+                        <button type="button" class="btn btn-outline-warning"><i class="bi bi-heart-fill"></i></button>
+                    </h4>
+               </div> 
+               <div class="col-md-6">
+                  <h3 style="color:rgb(255, 196, 0);" align="right">
+                    AR$ 1,849
+                  </h3>
+              </div>  
+
+        </div>
+  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--FIN DE CARD 3--> 
+
+    </div>
+    <!-- FIN DE MAYOR A MENOR---------------------------------------------------------------------->
+    <div class="tab-pane fade" id="Mayor" role="tabpanel" aria-labelledby="v-pills-settings-tab"><!-- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓Desde aca se puede copiar ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓------------------------>
+      <div class="card" style="background-color: rgba(12, 12, 12, 0.644); margin-top: 2%;" >
+        <div class="row">
+        <div class="col-md-6">
+          <center><img class=img_habitacion src="../IMG/imgHoteles/Hotel3/Habitaciones/Hab2.jpg" class="img-fluid"></center>
+        </div>
+        <div class="col-md-6" style="color:white">
+            <p></p>
+            <!-- Nombre y Estrellas:D-->
+            <center>
+            <div class="col-md-12">
+            <div class="col-md-6">
+            <h5 style="color:rgb(255, 196, 0)"> 
+                "Nombre de la Habitacion"
+            </h5>
+          </div>
+            <div class="col-6">
+              <h5 style="color:rgb(255, 196, 0)"> 
+            ★★★★★ 
+            </h5>
+           </div>
+          </div>
+          </center>
+            <!-- DESCRIPCION :D-->
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <p>"Descripcion de la habitación: (ejemplo)"</p>
+                           <p>Amplia habitación de 32 m2. te hace más cómodo para tu estancia. Las instalaciones de baño y las comodidades especiales se ofrecen de forma gratuita.</p>
+                        <ul>
+                            <li> <i class="bi bi-calendar4 iconos"></i> "Cantidad de camas" </li>
+                            <li> <i class="bi bi-people-fill iconos"></i> "Cantidad de personas" </li>
+                        </ul> 
+                    </div>
+      <!-- Iconos-->
+            <div class="row align-items-end">
+                <p>
+                    <span class="iconosTool" data-tooltip="Incluye Comidas"><i class="bi bi-basket3 iconos"></i></span>
+                    <span class="iconosTool" data-tooltip="Wifi"><i class="bi bi-wifi iconos"></i></span>
+                    <span class="iconosTool" data-tooltip="Aire Acondicionado"><i class="bi bi-snow3 iconos"></i></span>   
+                </p>
+      
+                  <div class="row">
+                    <div class="col-md-6">
+                        <h4 style="color:rgb(255, 196, 0);">
+                              <button type="button" class="btn btn-outline-warning">Reservar</button>
+                              <button type="button" class="btn btn-outline-warning"><i class="bi bi-heart-fill"></i></button>
+                          </h4>
+                     </div> 
+                     <div class="col-md-6">
+                        <h3 style="color:rgb(255, 196, 0);" align="right">
+                          AR$ 7,582
+                        </h3>
+                    </div>  
+      
+              </div>
+        </div>
+      </div>
+      
+            </div>
+          </div>
+        </div>
+      </div>
+                  <!--FIN DE CARD 2-->
+
+    </div>
+  </div><!-- FIN DE CONTENIDO -->
+
+  <!-----FIN DE CARDs----FIN DE CARDs----FIN DE CARDs----FIN DE CARDs----FIN DE CARDs---FIN DE CARDs-----FIN DE CARDs-----FIN DE CARDs----FIN DE CARDs--->
+ <!-- ↓ Estructura de cards y lateral NO BORRAR :D ↓--->
+</div>  
+    </div>
+</div>
+  </div>
+     <!-------------------------------------------------------- FOOTERS B)-------------------------------------------------------->
+<footer>
+       
+  <div class="container-footer-all">
+   
+      <div class="row">
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+              <!-------------------------------------------------------- Columna 1 B)-------------------------------------------------------->
+              <h3 style="color: rgb(255, 196, 0)">¿Quienes somos?</h3>
+
+              <p>Somos legion, no perdonamos, no olvidamos, esperanos. 恨</p>
+
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+               <!-------------------------------------------------------- Columna 2 B)-------------------------------------------------------->
+
+               <h3 style="color: rgb(255, 196, 0)">Redes Sociales</h3>
+               <div class="copyright">
+               <div class="row">
+                  <a href=""> <p> <i class="bi bi-facebook" style="color: rgb(255, 196, 0)"></i> Siguenos en Facebook</p> </a> 
+               </div>
+               <div class="row">
+                  <a href=""><p> <i class="bi bi-twitter" style="color: rgb(255, 196, 0)"></i> Siguenos en Twitter</p> </a> 
+               </div>
+               <div class="row">
+                  <a href=""> <p> <i class="bi bi-instagram" style="color: rgb(255, 196, 0)"></i> Siguenos en Instagram</p> </a>
+               </div>
+          </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+               <!-------------------------------------------------------- Columna 3 B)-------------------------------------------------------->
+               <h3 style="color: rgb(255, 196, 0)">Informacion Contactos</h3>
+
+               <div class="row2">
+                   <p> <i class="bi bi-building" style="color: rgb(255, 196, 0)"></i> calle falsa 123 - Malvinas do Brasileñas</p>
+               </div>
+
+               <div class="row2">
+                  <p> <i class="bi bi-telephone-forward" style="color: rgb(255, 196, 0)"></i> 0800 - 999 - 4HR3 </p>
+               </div>
+
+               <div class="row2">
+                    <p> <i class="bi bi-envelope-open-fill" style="color: rgb(255, 196, 0)"></i> brian.sfarfanet32@gmail.com</p>
+               </div>
+
+          </div>
+      </div>
+  </div>
+  
+   <div class="container-footer">
+          <div class="footer">
+               <div class="copyright">
+                   © 2021 Todos los Derechos Reservados | <a href="">BBB Company Incorporation</a>
+               </div>
+           </div>
+          </div>
+       </div>
+   
+</footer>
+</body>
+</html>
